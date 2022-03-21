@@ -45,6 +45,7 @@ possibleChoice.forEach(possibleChoices => possibleChoices.addEventListener('clic
 
   }))
 
+
   possibleChoice.onclick= function() {myFunction()}
   
   function myFunction(){
