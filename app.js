@@ -1,4 +1,4 @@
-const computerChoiceDisplay = document.getElementById('computer-choice')
+const computerPlayDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoice = document.querySelectorAll('button')
@@ -15,9 +15,9 @@ console.log(possibleChoices)
 
 
 //Creation of the function that will randomize the computer's choices
-let computerChoice = possibleChoices[Math.floor(Math.random()*possibleChoices.length)];
-console.log(computerChoice)
-computerChoiceDisplay.innerHTML = computerChoice
+let computerPlay = possibleChoices[Math.floor(Math.random()*possibleChoices.length)];
+console.log(computerPlay)
+computerPlayDisplay.innerHTML = computerPlay
 
 
 //Creation of the 3 buttons for the player to chose between
@@ -40,7 +40,7 @@ for(var i=0; i< buttonId.length; i++){
 possibleChoice.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) => {
     userChoice = e.target.id
     userChoiceDisplay.innerHTML = userChoice
-    computerChoice()
+    computerPlay()
     getResult()
 
   }))
