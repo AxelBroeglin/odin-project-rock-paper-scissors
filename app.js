@@ -1,25 +1,48 @@
-const computerPlayDisplay = document.getElementById('computer-choice')
+const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
-const possibleChoice = document.querySelectorAll('button')
+const possibleChoices = document.querySelectorAll('button')
+let userChoice
+let computerChoice
 let result
 
 //Creation of the array with all the possible choices
-const possibleChoices = [
+const test = [
     "Rock",
     "Paper",
     "Scissors"
 ];
-console.log(possibleChoices)
+console.log(test)
 
 //Creation of the function that will randomize the computer's choices
-let computerPlay = possibleChoices[Math.floor(Math.random()*possibleChoices.length)];
-console.log(computerPlay)
-computerPlayDisplay.innerHTML = computerPlay
+function generateComputerChoice() {
+    let generateComputerChoice = test[Math.floor(Math.random()*test.length)];
+    computerChoice = generateComputerChoice
+    computerChoiceDisplay.innerHTML = computerChoice
+  }
+console.log(generateComputerChoice)
+
+//Creation of the function that will calculate the results
+function getResult() {
+
+}
+
+//Everything that happens when we click
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+  userChoice = e.target.id
+  userChoiceDisplay.innerHTML = userChoice
+  generateComputerChoice()
+  getResult()
+}))
+
+
+
+
+
 
 
 //Creation of the 3 buttons for the player to chose between
-let btn = ''
+/* let btn = ''
 possibleChoices.forEach(function(buttonCreation) {
     btn += '<button type="button">'+ buttonCreation + '</button>';
 }); 
@@ -32,14 +55,7 @@ let incrementedId = 1;
 for(var i=0; i< buttonId.length; i++){
     buttonId[i].id = incrementedId;
     incrementedId++;
-}
+} */
 
 
 
-document.querySelectorAll('button').onclick = userChoice()
-
-function userChoice() {
-    userChoiceDisplay.innerHTML = userChoice
-}
-
-console.log(userChoice)
