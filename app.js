@@ -62,7 +62,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 
 
 
-//Creation of the 3 buttons for the player to chose between
+//Creation of the 3 buttons for the player to chose between. Will the game be played in browser ?
 /* let btn = ''
 possibleChoices.forEach(function(buttonCreation) {
     btn += '<button type="button">'+ buttonCreation + '</button>';
